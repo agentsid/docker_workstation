@@ -4,18 +4,29 @@ services:
     command: /bin/bash
     ports:
       - 3001:3001
+    working_dir: ~/
 
   ansible_worker_node2:
     image: siddharthadmin/ansible-worker-node:latest
     command: /bin/bash
     ports:
       - 3002:3002
+    working_dir: ~/
   
   ansible_worker_node3:
     image: siddharthadmin/ansible-worker-node:latest
     command: /bin/bash
     ports:
       - 3003:3003
+    working_dir: ~/
+
+  mysql:
+    image: mysql:latest
+    volumes:
+      
+    environment:
+      MYSQL_ROOT_PASSWORD: ready2go
+      MYSQL_DATABASE: MYSQL_DATABASE
 
 
 # volumes:
