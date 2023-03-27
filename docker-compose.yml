@@ -1,15 +1,21 @@
 services:
   ansible_worker_node1:
-    image: siddharthadmin/an1:latest
+    image: siddharthadmin/ansible-worker-node:latest
     command: /bin/bash
+    ports:
+      - 3001:3001
 
   ansible_worker_node2:
-    image: siddharthadmin/an1:latest
+    image: siddharthadmin/ansible-worker-node:latest
     command: /bin/bash
+    ports:
+      - 3002:3002
   
   ansible_worker_node3:
-    image: siddharthadmin/an3:latest
+    image: siddharthadmin/ansible-worker-node:latest
     command: /bin/bash
+    ports:
+      - 3003:3003
 
 
 # volumes:
