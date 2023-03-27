@@ -1,11 +1,15 @@
 services:
   ansible_worker_node1:
     image: siddharthadmin/an1:latest
-    command: sh -c "service ssh restart"
+    command: /bin/bash
 
   ansible_worker_node2:
     image: siddharthadmin/an1:latest
-    command: sh -c "service ssh restart"
+    command: /bin/bash
+  
+  ansible_worker_node3:
+    image: siddharthadmin/an3:latest
+    command: /bin/bash
 
 
 # volumes:
