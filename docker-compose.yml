@@ -10,9 +10,9 @@ services:
       POSTGRES_DB: ready2go
     ports:
       - "5432:5432"
-    volumes:
-      - db_data: /home/siddharth/shared/postgress
+#     volumes:
+#       - db_data: /home/siddharth/shared/postgress
 
 
-volumes:
-  db_data: /home/siddharth/shared/postgress
+# volumes:
+#   db_data: /home/siddharth/shared/postgress
