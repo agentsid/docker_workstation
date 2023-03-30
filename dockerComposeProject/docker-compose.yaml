@@ -10,7 +10,7 @@ services:
 
  website:
    image: php:apache
-   volumes:
+   volumes: 
      - ./website:/var/www/html
    ports:
      - 5000:80
