@@ -4,7 +4,7 @@ services:
   ansible-worker1:
     image: siddharthadmin/ansible-worker-node:latest
     container_name: d_node1
-    command: >
+    command: |
       sh -c "apt-get update && apt-get install openssh-server -y && apt-get install python3 -y && apt-get install ansible -y";
       apt-get install sudo -y && apt-get install vim -y;
       useradd -m ansible && echo "ansible:ansible" | chpasswd && adduser ansible sudo;
@@ -17,7 +17,7 @@ services:
   ansible-worker2:
     image: siddharthadmin/ansible-worker-node:latest
     container_name: d_node2
-    command: >
+    command: |
       sh -c "apt-get update && apt-get install openssh-server -y && apt-get install python3 -y && apt-get install ansible -y";
       apt-get install sudo -y && apt-get install vim -y;
       useradd -m ansible && echo "ansible:ansible" | chpasswd && adduser ansible sudo;
@@ -30,7 +30,7 @@ services:
   ansible-worker3:
     image: siddharthadmin/ansible-worker-node:latest
     container_name: d_node3
-    command: >
+    command: |
       sh -c "apt-get update && apt-get install openssh-server -y && apt-get install python3 -y && apt-get install ansible -y";
       apt-get install sudo -y && apt-get install vim -y;
       useradd -m ansible && echo "ansible:ansible" | chpasswd && adduser ansible sudo;
