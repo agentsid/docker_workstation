@@ -3,7 +3,7 @@ services:
       mydb:
         image: postgres
         volumes:
-          - db-data:/var/lib/docker/volumes/shared/_data
+          - db-data: /var/lib/docker/volumes/shared/_data
         ports:
           - "5432:5432"
 volumes:
