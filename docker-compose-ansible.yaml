@@ -1,0 +1,41 @@
+version: '3.9'
+
+services:
+  ansible-worker1:
+    image: siddharthadmin/ansible-worker-node:latest
+    container_name: d_node1
+    command: >
+      sh -c "apt-get update && apt-get install openssh-server -y && apt-get install python3 -y && apt-get install ansible -y";
+      apt-get install sudo -y && apt-get install vim -y;
+      useradd -m ansible && echo "ansible:ansible" | chpasswd && adduser ansible sudo;
+      mkdir -p /home/ansible/.ssh;
+      chown -R ansible:ansible /home/ansible/.ssh;
+      echo 'Image is ready ' && /bin/bash
+    ports:
+      - "8080:8080"
+    
+  ansible-worker2:
+    image: siddharthadmin/ansible-worker-node:latest
+    container_name: d_node2
+    command: >
+      sh -c "apt-get update && apt-get install openssh-server -y && apt-get install python3 -y && apt-get install ansible -y";
+      apt-get install sudo -y && apt-get install vim -y;
+      useradd -m ansible && echo "ansible:ansible" | chpasswd && adduser ansible sudo;
+      mkdir -p /home/ansible/.ssh;
+      chown -R ansible:ansible /home/ansible/.ssh;
+      echo 'Image is ready ' && /bin/bash
+    ports:
+      - "8081:8081"
+    
+  ansible-worker3:
+    image: siddharthadmin/ansible-worker-node:latest
+    container_name: d_node3
+    command: >
+      sh -c "apt-get update && apt-get install openssh-server -y && apt-get install python3 -y && apt-get install ansible -y";
+      apt-get install sudo -y && apt-get install vim -y;
+      useradd -m ansible && echo "ansible:ansible" | chpasswd && adduser ansible sudo;
+      mkdir -p /home/ansible/.ssh;
+      chown -R ansible:ansible /home/ansible/.ssh;
+      echo 'Image is ready ' && /bin/bash
+    ports:
+      - "8083:8083"
