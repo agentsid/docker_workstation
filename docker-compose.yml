@@ -1,11 +1,16 @@
-version: '3.2'
-services:
-      mydb:
-        image: postgres
-        volumes:
-          - db-data: /var/lib/docker/volumes/shared/_data
-        ports:
-          - "5432:5432"
-volumes:
-  db-data:
+version: '3.9'
 
+services:
+  db:
+    image: mysql:latest
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: ready2go
+      MYSQL_DATABASE: mysql-database
+    ports:
+      - "3306:3306"
+    volumes:
+      - shared:/var/lib/docker/volumes/shared/_data
+
+volumes:
+  shared:
