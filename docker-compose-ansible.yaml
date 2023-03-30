@@ -6,7 +6,7 @@ services:
   ansible-worker1:
     image: siddharthadmin/ansible-worker-node:latest
     container_name: d_node1
-    restart: unless-stopped
+    #restart: unless-stopped
     tty: true
     # command: |
     #   sh -c "apt-get update && apt-get install openssh-server -y && apt-get install python3 -y && apt-get install ansible -y";
@@ -21,7 +21,7 @@ services:
   ansible-worker2:
     image: siddharthadmin/ansible-worker-node:latest
     container_name: d_node2
-    restart: unless-stopped
+    #restart: unless-stopped
     tty: true
     # command: |
     #   sh -c "apt-get update && apt-get install openssh-server -y && apt-get install python3 -y && apt-get install ansible -y";
@@ -36,7 +36,7 @@ services:
   ansible-worker3:
     image: siddharthadmin/ansible-worker-node:latest
     container_name: d_node3
-    restart: unless-stopped
+    #restart: unless-stopped
     tty: true
     # command: |
     #   sh -c "apt-get update && apt-get install openssh-server -y && apt-get install python3 -y && apt-get install ansible -y";
