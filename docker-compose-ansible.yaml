@@ -8,13 +8,13 @@ services:
     container_name: d_node1
     restart: unless-stopped
     tty: true
-    command: |
-      sh -c "apt-get update && apt-get install openssh-server -y && apt-get install python3 -y && apt-get install ansible -y";
-      sh -c "apt-get install sudo -y && apt-get install vim -y";
-      sh -c "useradd -m ansible && echo "ansible:ansible" | chpasswd && adduser ansible sudo";
-      sh -c "mkdir -p /home/ansible/.ssh";
-      sh -c "chown -R ansible:ansible /home/ansible/.ssh";
-      sh -c "echo 'Image is ready ' && /bin/bash"
+    # command: |
+    #   sh -c "apt-get update && apt-get install openssh-server -y && apt-get install python3 -y && apt-get install ansible -y";
+    #   sh -c "apt-get install sudo -y && apt-get install vim -y";
+    #   sh -c "useradd -m ansible && echo "ansible:ansible" | chpasswd && adduser ansible sudo";
+    #   sh -c "mkdir -p /home/ansible/.ssh";
+    #   sh -c "chown -R ansible:ansible /home/ansible/.ssh";
+    #   sh -c "echo 'Image is ready ' && /bin/bash"
     ports:
       - "8080:8080"
     
@@ -23,13 +23,13 @@ services:
     container_name: d_node2
     restart: unless-stopped
     tty: true
-    command: |
-      sh -c "apt-get update && apt-get install openssh-server -y && apt-get install python3 -y && apt-get install ansible -y";
-      sh -c "apt-get install sudo -y && apt-get install vim -y";
-      sh -c "useradd -m ansible && echo "ansible:ansible" | chpasswd && adduser ansible sudo";
-      sh -c "mkdir -p /home/ansible/.ssh";
-      sh -c "chown -R ansible:ansible /home/ansible/.ssh";
-      sh -c "echo 'Image is ready ' && /bin/bash"
+    # command: |
+    #   sh -c "apt-get update && apt-get install openssh-server -y && apt-get install python3 -y && apt-get install ansible -y";
+    #   sh -c "apt-get install sudo -y && apt-get install vim -y";
+    #   sh -c "useradd -m ansible && echo "ansible:ansible" | chpasswd && adduser ansible sudo";
+    #   sh -c "mkdir -p /home/ansible/.ssh";
+    #   sh -c "chown -R ansible:ansible /home/ansible/.ssh";
+    #   sh -c "echo 'Image is ready ' && /bin/bash"
     ports:
       - "8081:8081"
     
@@ -38,12 +38,12 @@ services:
     container_name: d_node3
     restart: unless-stopped
     tty: true
-    command: |
-      sh -c "apt-get update && apt-get install openssh-server -y && apt-get install python3 -y && apt-get install ansible -y";
-      sh -c "apt-get install sudo -y && apt-get install vim -y";
-      sh -c "useradd -m ansible && echo "ansible:ansible" | chpasswd && adduser ansible sudo";
-      sh -c "mkdir -p /home/ansible/.ssh";
-      sh -c "chown -R ansible:ansible /home/ansible/.ssh";
-      sh -c "echo 'Image is ready ' && /bin/bash"
+    # command: |
+    #   sh -c "apt-get update && apt-get install openssh-server -y && apt-get install python3 -y && apt-get install ansible -y";
+    #   sh -c "apt-get install sudo -y && apt-get install vim -y";
+    #   sh -c "useradd -m ansible && echo "ansible:ansible" | chpasswd && adduser ansible sudo";
+    #   sh -c "mkdir -p /home/ansible/.ssh";
+    #   sh -c "chown -R ansible:ansible /home/ansible/.ssh";
+    #   sh -c "echo 'Image is ready ' && /bin/bash"
     ports:
       - "8083:8083"
