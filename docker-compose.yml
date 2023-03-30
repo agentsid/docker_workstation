@@ -1,18 +1,15 @@
-version: "3"
+version: '3'
 
 services:
-  db:
-    image: postgres
+  mysql:
+    image: mysql:latest
     restart: always
     environment:
-      POSTGRES_USER: root
-      POSTGRES_PASSWORD: ready2go
-      POSTGRES_DB: ready2go
+      MYSQL_ROOT_PASSWORD: ready2go
     ports:
-      - "5432:5432"
+      - "3306:3306"
     volumes:
-      - db_data: /var/lib/docker/volumes/postgres/_data
-
+      - mysql-data:/var/lib/docker/volumes/dbdata/_data
 
 volumes:
-  db_data: /var/lib/docker/volumes/postgres/_data
+  mysql-data:
