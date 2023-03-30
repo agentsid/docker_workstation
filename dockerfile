@@ -1,4 +1,5 @@
 FROM ubuntu:latest
+#MAINTAINER siddharth singh
 RUN echo 'creating ansible worker image'
 RUN apt-get update && apt-get install openssh-server -y && apt-get install python3 -y && apt-get install ansible -y
 Run apt-get install sudo -y && apt-get install vim -y
