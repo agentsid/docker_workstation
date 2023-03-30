@@ -1,6 +1,7 @@
 version: '3.9'
 volumes:
-  shared:/var/lib/docker/volumes/shared/_data
+  myvolume:
+     - shared:/var/lib/docker/volumes/shared/_data
 services:
   ansible-worker1:
     image: siddharthadmin/ansible-worker-node:latest
