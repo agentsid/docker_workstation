@@ -9,7 +9,7 @@ services:
     ports:
       - "3306:3306"
     volumes:
-      - mysql-data: /var/lib/docker/volumes/shared/
+      - mysql-data: /var/lib/docker/volumes/shared/_data
 
 volumes:
   mysql-data:
