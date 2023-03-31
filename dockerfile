@@ -9,4 +9,4 @@ RUN mkdir -p /home/ansible/.ssh
 RUN chown -R ansible:ansible /home/ansible/.ssh
 #USER ansible
 #WORKDIR /home/ansible
-ENTRYPOINT echo"Ansible worker image is ready" && /bin/bash 
+ENTRYPOINT echo "Ansible worker image is ready" && /bin/bash 
