@@ -3,7 +3,8 @@ version: '3.9'
 services:
   db:
     image: mysql:latest
-    restart: always
+    restart: unless-stopped
+    tty: true
     container_name: mysql
     environment:
       MYSQL_ROOT_PASSWORD: ready2go
@@ -11,7 +12,7 @@ services:
     ports:
       - "3306:3306"
     volumes:
-      - shared:/var/lib/docker/volumes/shared/_data
+      - /var/lib/docker/volumes/shared/_data
 
-volumes:
-  shared:
+# volumes:
+#   shared:
