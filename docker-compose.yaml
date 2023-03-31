@@ -5,7 +5,7 @@ services:
     image: nginx
     #build: .
     ports:
-      - '8081:8080'
+      - '80:80'
 
   mysqldb:
     container_name: mysqldb
