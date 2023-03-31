@@ -21,7 +21,7 @@ services:
     restart: always
     deploy:
       replicas: 3
-    command: /bin/bash && hostname -i 
+    command: /bin/bash 
     # ports:
     #   - "8000:8000"
     
