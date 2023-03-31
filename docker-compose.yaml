@@ -20,6 +20,7 @@ services:
     tty: true
     deploy:
       replicas: 3
+    command: /bin/bash && hostname -i 
     # ports:
     #   - "8000:8000"
     
