@@ -1,15 +1,15 @@
 version: "3"
 services:
-  ansible-app:
+  nginx:
     #container_name: 
-    image: nginx:latest
+    image: nginx
     #build: .
     ports:
       - 8000-8999:8080
 
   mysqldb:
     container_name: mysqldb
-    image: mysql:latest
+    image: mysql
     ports:
       - '3306:3306'
     environment:
