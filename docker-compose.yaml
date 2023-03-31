@@ -16,10 +16,10 @@ services:
       MYSQL_DATABASE: test
       MYSQL_ROOT_PASSWORD: root
 
-  ansible:
-    #container_name: 
-    image: siddharthadmin/ansible-worker-node: latest
-    #build: .
-    ports:
-      - '8000-8999:8080'
+  # ansible:
+  #   #container_name: 
+  #   image: siddharthadmin/ansible-worker-node: latest
+  #   #build: .
+  #   ports:
+  #     - '8000-8999:8080'
     
