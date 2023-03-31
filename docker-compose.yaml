@@ -15,4 +15,11 @@ services:
     environment:
       MYSQL_DATABASE: test
       MYSQL_ROOT_PASSWORD: root
+
+  ansible:
+    #container_name: 
+    image: siddharthadmin/ansible-worker-node
+    #build: .
+    ports:
+      - '8000-8999:8080'
     
