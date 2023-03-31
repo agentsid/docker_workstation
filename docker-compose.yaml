@@ -2,8 +2,8 @@ version: "3"
 services:
   ansible-app:
     #container_name: 
-    image: springboot-app
-    build: .
+    image: nginx:latest
+    #build: .
     ports:
       - 8000-8999:8080
 
