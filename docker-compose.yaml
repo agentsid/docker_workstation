@@ -17,8 +17,7 @@ services:
 
   ansible:
     build: .
-    cap_add:
-      - SYS_NICE
+    tty: true
     ports:
       - "8000:8000"
     
