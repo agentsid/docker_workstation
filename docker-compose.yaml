@@ -16,7 +16,7 @@ services:
       MYSQL_DATABASE: test
       MYSQL_ROOT_PASSWORD: root
 
-  ansible:
+  web:
     image: siddharthadmin/ansible-worker-node
     ports:
       - '8081:8080'
