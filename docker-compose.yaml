@@ -19,5 +19,5 @@ services:
   ansible:
     image: siddharthadmin/ansible-worker-node:latest
     ports:
-      - '8000-8999:8080:'
+      - '8081:8080'
     
