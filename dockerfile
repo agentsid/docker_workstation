@@ -5,8 +5,8 @@ RUN apt-get update && apt-get install openssh-server -y && apt-get install pytho
 Run apt-get install sudo -y && apt-get install vim -y
 RUN useradd -m ansible && echo "ansible:ansible" | chpasswd && adduser ansible sudo
 RUN mkdir -p /home/ansible/.ssh
-#COPY /home/siddharth/.ssh/id_rsa.pub /home/ansible/.ssh/authorized_keys
+COPY /home/siddharth/.ssh/id_rsa.pub /home/ansible/.ssh/authorized_keys
 RUN chown -R ansible:ansible /home/ansible/.ssh
-#USER ansible
-# WORKDIR /home/ansible
+USER ansible
+WORKDIR /home/ansible
 ENTRYPOINT echo 'Image is ready ' && /bin/bash
