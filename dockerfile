@@ -7,7 +7,7 @@ RUN useradd -m ansible && echo "ansible:ansible" | chpasswd && adduser ansible s
 RUN mkdir -p /home/ansible/.ssh
 #COPY /home/siddharth/.ssh/id_rsa.pub /home/ansible/.ssh/authorized_keys
 RUN chown -R ansible:ansible /home/ansible/.ssh
-Run service sshd enable && service sshd start
+Run service ssh enable && service ssh start
 #USER ansible
 #WORKDIR /home/ansible
 ENTRYPOINT echo"Ansible worker image is ready" && /bin/bash
