@@ -1,9 +1,8 @@
 version: "3.9"
 services:
   nginx:
-    #container_name: 
+    container_name: nginx
     image: nginx
-    #build: .
     ports:
       - '80:80'
 
@@ -18,6 +17,8 @@ services:
 
   ansible:
     build: .
+    cap_add:
+      - SYS_NICE
     ports:
       - "8000:8000"
     
