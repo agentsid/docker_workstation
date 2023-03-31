@@ -1,8 +1,8 @@
 version: "3"
 services:
-  springboot-app:
+  ansible-app:
     #container_name: 
-    image: springboot:latest
+    image: siddharthadmin/ansible-worker-node:latest
     #build: .
     ports:
       - 8000-8999:8080
