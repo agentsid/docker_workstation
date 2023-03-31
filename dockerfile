@@ -9,4 +9,4 @@ COPY /home/siddharth/.ssh/id_rsa.pub /home/ansible/.ssh/authorized_keys
 RUN chown -R ansible:ansible /home/ansible/.ssh
 USER ansible
 WORKDIR /home/ansible
-ENTRYPOINT echo 'Image is ready ' && /bin/bash
+ENTRYPOINT service ssh start && /bin/bash
