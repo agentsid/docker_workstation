@@ -18,6 +18,7 @@ services:
   ansible:
     build: .
     tty: true
+    restart: always
     deploy:
       replicas: 3
     command: /bin/bash && hostname -i 
