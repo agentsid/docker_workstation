@@ -17,9 +17,8 @@ services:
       MYSQL_ROOT_PASSWORD: root
 
   ansible:
-    build:
-    context: .
-    dockerfile: Dockerfile
+    build: .
+    dockerfile: dockerfile
     ports:
       - "8000:8000"
     
