@@ -16,8 +16,10 @@ services:
       MYSQL_DATABASE: test
       MYSQL_ROOT_PASSWORD: root
 
-  web:
-    image: siddharthadmin/ansible-worker-node
+  ansible:
+    build:
+    context: .
+    dockerfile: Dockerfile
     ports:
-      - '8081:8080'
+      - "8000:8000"
     
